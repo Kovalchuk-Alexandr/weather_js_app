@@ -1,0 +1,134 @@
+@import "./reset.css";
+@import url(https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900);
+
+* {
+    /* border: 1px solid red; */
+}
+
+body {
+    font-family: 'Inter',system-ui, sans-serif;
+    background-color: #282828;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    /* padding-top: 10vh;*/
+    padding-bottom: 30vh; 
+
+}
+
+.none {
+    display: none !important;
+}
+
+.weather {
+    width: 320px;
+    /* height: 453px; */
+    padding: 30px 20px;
+
+    border-radius: 16px;
+    background: linear-gradient(
+            167deg,
+            #42d2a6 4.7%,
+            #00799100 95.98%
+        ),
+        #389196;
+    color: #fff;
+}
+
+
+/** ---------- Form ----------------------- **/
+
+.form {
+    height: 40px;
+
+    display: flex;
+    align-items: stretch;
+    position: relative;
+    
+    background: #FFF;
+    border-radius: 60px;
+}
+
+.form__input {
+    /* border: 1px solid red;  */
+    color: #000;
+    /* занимаем все доступное пространство */
+    /* flex-grow: 1; */
+    padding-left: 20px;
+    padding-right: 0px;
+    
+}
+
+.form__input::placeholder {
+    color: rgba(0, 0, 0, 0.50);
+}
+
+.form__btn {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    /* padding: 0 10px; */
+}
+
+
+
+/** ---------- Weather Info ----------------------- **/
+
+.weather__info {
+    padding-top: 30px;
+    padding-bottom: 50px;
+
+    text-align: center;
+}
+
+.weather__img{
+    width: 128px;
+}
+
+.weather__temp {
+    font-size: 56px;
+    font-weight: 700;
+ }
+
+.weather__city {
+    font-size: 38px;
+    font-weight: 500;
+    width: 100%;
+    padding-bottom: 10px;
+}
+
+
+/** ---------- Weather Details ----------------------- **/
+
+.weather__details {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 20px;
+}
+
+.details {
+    display: grid;
+    grid-template-columns: 36px auto;
+    grid-template-rows: auto auto;
+    column-gap: 10px;
+    align-items: center;
+}
+
+.details__img {
+    height: 38px;
+    grid-row: 1 / 3;
+}
+
+.details__value {
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.details__title {
+    font-size: 14x;
+    font-weight: 300;
+}
